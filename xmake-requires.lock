@@ -1,0 +1,130 @@
+{
+    __meta__ = {
+        version = "1.0"
+    },
+    ["windows|x64"] = {
+        ["SkyrimScripting.Entrypoint#ca5fec67"] = {
+            branch = "@default",
+            repo = {
+                commit = "1c5d83c3faad37800acdd0c98347a6695e4ab933",
+                url = "https://github.com/SkyrimScriptingBeta/Packages.git"
+            },
+            version = "@default"
+        },
+        ["SkyrimScripting.Logging#ca5fec67"] = {
+            branch = "@default",
+            repo = {
+                commit = "1c5d83c3faad37800acdd0c98347a6695e4ab933",
+                url = "https://github.com/SkyrimScriptingBeta/Packages.git"
+            },
+            version = "@default"
+        },
+        ["SkyrimScripting.Plugin#ca5fec67"] = {
+            branch = "@default",
+            repo = {
+                commit = "1c5d83c3faad37800acdd0c98347a6695e4ab933",
+                url = "https://github.com/SkyrimScriptingBeta/Packages.git"
+            },
+            version = "@default"
+        },
+        ["SkyrimScripting.SKSE_Messages#ca5fec67"] = {
+            branch = "@default",
+            repo = {
+                commit = "1c5d83c3faad37800acdd0c98347a6695e4ab933",
+                url = "https://github.com/SkyrimScriptingBeta/Packages.git"
+            },
+            version = "@default"
+        },
+        ["cmake#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "98258c6f9e61748a9bb7e41e8b44b1290899d078",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "3.31.5"
+        },
+        ["fmt#c9428c73"] = {
+            repo = {
+                branch = "master",
+                commit = "bb54400b27d668592875c08369f7d1cb5b251648",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "11.1.4"
+        },
+        ["freetype#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "98258c6f9e61748a9bb7e41e8b44b1290899d078",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "2.13.1"
+        },
+        ["global_macro_functions#31fecfc4"] = {
+            branch = "@default",
+            repo = {
+                commit = "29972e772984f0c9b17f433c663ae654b4dc1e45",
+                url = "https://github.com/MrowrLib/Packages.git"
+            },
+            version = "@default"
+        },
+        ["imgui#16a83982"] = {
+            repo = {
+                branch = "master",
+                commit = "98258c6f9e61748a9bb7e41e8b44b1290899d078",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v1.91.8"
+        },
+        ["pkgconf#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "98258c6f9e61748a9bb7e41e8b44b1290899d078",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "2.0.3"
+        },
+        ["rsm-binary-io#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "3b847188b86101819d409d77602ee719b7e10001",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "2.0.6"
+        },
+        ["skse_plugin_info#31fecfc4"] = {
+            branch = "@default",
+            repo = {
+                commit = "58de063a5893d3f11dfb53317fe988623617ca15",
+                url = "https://github.com/SkyrimScripting/Packages.git"
+            },
+            version = "@default"
+        },
+        ["skyrim-commonlib-ae#31fecfc4"] = {
+            branch = "@default",
+            repo = {
+                commit = "58de063a5893d3f11dfb53317fe988623617ca15",
+                url = "https://github.com/SkyrimScripting/Packages.git"
+            },
+            version = "@default"
+        },
+        ["spdlog#b06e1130"] = {
+            repo = {
+                branch = "master",
+                commit = "627427381860516c14b27ad87012f56d0d931620",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v1.15.2"
+        },
+        ["vcpkg::boost-stl-interfaces#31fecfc4"] = {
+            version = "latest"
+        },
+        ["zlib#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "98258c6f9e61748a9bb7e41e8b44b1290899d078",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v1.3.1"
+        }
+    }
+}
