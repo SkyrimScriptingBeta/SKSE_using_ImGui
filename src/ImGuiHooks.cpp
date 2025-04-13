@@ -8,6 +8,7 @@
 
 #include <atomic>
 
+#include "DxScanCodes.h"
 #include "stl.h"
 
 // Forward declare message handler from imgui_impl_win32.cpp
@@ -38,11 +39,12 @@ void ShowMouseCursor(bool show) {
 void RenderManager::Install() {
     Log("Installing RenderManager hooks...");
 
-    SKSE::AllocTrampoline(14 * 2);
+    SKSE::AllocTrampoline(14 * 3);
 
     // Write the thunk calls
     stl::write_thunk_call<RenderManager::D3DInitHook>();
     stl::write_thunk_call<RenderManager::DXGIPresentHook>();
+    stl::write_thunk_call<RenderManager::ProcessInputQueueHook>();
 
     Log("RenderManager hooks installed");
 }
@@ -176,4 +178,28 @@ void RenderManager::Draw() {
     }
 
     ImGui::End();
+}
+
+void RenderManager::ProcessInputQueueHook::thunk(RE::BSTEventSink<RE::InputEvent*>* a_eventSink, RE::InputEvent* const* eventPtr) {
+    if (_showUI) {
+        if (eventPtr && *eventPtr) {
+            auto event = *eventPtr;
+            if (event->GetEventType() == RE::INPUT_EVENT_TYPE::kButton) {
+                auto* buttonEvent = event->AsButtonEvent();
+                if (buttonEvent->IsDown()) {
+                    auto dxScanCode = buttonEvent->GetIDCode();
+                    if (dxScanCode == static_cast<DX_SCAN_CODE_ID>(DX_SCAN_CODE::PAGE_UP)) {  // hard coded here :)
+                        // Hide the UI and mouse cursor
+                        ShowMouseCursor(false);
+                        ShowUI(false);
+                    }
+                }
+            }
+        }
+
+        constexpr RE::InputEvent* const dummy[] = {nullptr};
+        func(a_eventSink, dummy);
+    } else {
+        func(a_eventSink, eventPtr);
+    }
 }

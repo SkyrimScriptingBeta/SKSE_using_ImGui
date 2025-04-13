@@ -54,6 +54,16 @@ struct RenderManager {
         static constexpr auto offset = SE_AE_VR(0x9, 0x9, 0x15);
     };
 
+    // Hook the game's ProcessInputQueue function to handle input events
+    struct ProcessInputQueueHook {
+        static void                                    thunk(RE::BSTEventSink<RE::InputEvent*>* a_eventSink, RE::InputEvent* const* a_event);
+        static inline REL::Relocation<decltype(thunk)> func;
+
+        // SE and AE addresses for the ProcessInputQueue function
+        static constexpr auto id     = REL::ID(SE_AE_VR(67315, 68617, 0xC519E0));
+        static constexpr auto offset = SE_AE_VR(0x7B, 0x7B, 0x81);
+    };
+
     // Called each frame to render ImGui content
     static void Draw();
 
