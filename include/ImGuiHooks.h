@@ -38,8 +38,9 @@ struct RenderManager {
         static inline REL::Relocation<decltype(thunk)> func;
 
         // SE and AE addresses for the D3D initialization function
-        static constexpr auto id     = REL::ID(SE_AE_VR(75595, 77226, 0xDC5530));
-        static constexpr auto offset = SE_AE_VR(0x9, 0x275, 0x9);
+        static constexpr auto           id         = REL::ID(SE_AE_VR(75595, 77226, 0xDC5530));
+        static constexpr auto           offset     = SE_AE_VR(0x9, 0x275, 0x9);
+        static constexpr std::uintptr_t vr_address = 0xDC5530 + 0x9;
 
         static inline std::atomic<bool> initialized = false;
     };
@@ -50,8 +51,9 @@ struct RenderManager {
         static inline REL::Relocation<decltype(thunk)> func;
 
         // SE and AE addresses for the Present function
-        static constexpr auto id     = REL::ID(SE_AE_VR(75461, 77246, 0xDBBDD0));
-        static constexpr auto offset = SE_AE_VR(0x9, 0x9, 0x15);
+        static constexpr auto           id         = REL::ID(SE_AE_VR(75461, 77246, 0xDBBDD0));
+        static constexpr auto           offset     = SE_AE_VR(0x9, 0x9, 0x15);
+        static constexpr std::uintptr_t vr_address = 0xDBBDD0 + 0x15;
     };
 
     // Hook the game's ProcessInputQueue function to handle input events
@@ -60,8 +62,9 @@ struct RenderManager {
         static inline REL::Relocation<decltype(thunk)> func;
 
         // SE and AE addresses for the ProcessInputQueue function
-        static constexpr auto id     = REL::ID(SE_AE_VR(67315, 68617, 0xC519E0));
-        static constexpr auto offset = SE_AE_VR(0x7B, 0x7B, 0x81);
+        static constexpr auto           id         = REL::ID(SE_AE_VR(67315, 68617, 0xC519E0));
+        static constexpr auto           offset     = SE_AE_VR(0x7B, 0x7B, 0x81);
+        static constexpr std::uintptr_t vr_address = 0xC519E0 + 0x81;
     };
 
     // Called each frame to render ImGui content

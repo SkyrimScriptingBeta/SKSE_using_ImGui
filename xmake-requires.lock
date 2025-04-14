@@ -3,7 +3,7 @@
         version = "1.0"
     },
     ["windows|x64"] = {
-        ["SkyrimScripting.Entrypoint#ca5fec67"] = {
+        ["SkyrimScripting.Entrypoint#ad17ff01"] = {
             branch = "@default",
             repo = {
                 commit = "1c5d83c3faad37800acdd0c98347a6695e4ab933",
@@ -11,7 +11,7 @@
             },
             version = "@default"
         },
-        ["SkyrimScripting.Logging#ca5fec67"] = {
+        ["SkyrimScripting.Logging#ad17ff01"] = {
             branch = "@default",
             repo = {
                 commit = "1c5d83c3faad37800acdd0c98347a6695e4ab933",
@@ -19,7 +19,7 @@
             },
             version = "@default"
         },
-        ["SkyrimScripting.Plugin#ca5fec67"] = {
+        ["SkyrimScripting.Plugin#ad17ff01"] = {
             branch = "@default",
             repo = {
                 commit = "1c5d83c3faad37800acdd0c98347a6695e4ab933",
@@ -27,7 +27,7 @@
             },
             version = "@default"
         },
-        ["SkyrimScripting.SKSE_Messages#ca5fec67"] = {
+        ["SkyrimScripting.SKSE_Messages#ad17ff01"] = {
             branch = "@default",
             repo = {
                 commit = "1c5d83c3faad37800acdd0c98347a6695e4ab933",
@@ -99,13 +99,12 @@
             },
             version = "@default"
         },
-        ["skyrim-commonlib-ae#31fecfc4"] = {
-            branch = "@default",
+        ["skyrim-commonlib-vr#31fecfc4"] = {
             repo = {
-                commit = "58de063a5893d3f11dfb53317fe988623617ca15",
+                commit = "ca07e81a7251cb7a2526964158f1b493ce908d1d",
                 url = "https://github.com/SkyrimScripting/Packages.git"
             },
-            version = "@default"
+            version = "latest"
         },
         ["spdlog#b06e1130"] = {
             repo = {

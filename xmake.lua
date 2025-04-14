@@ -5,7 +5,8 @@ add_rules("mode.debug", "mode.release")
 set_languages("c++23")
 
 option("commonlib")
-    set_default("skyrim-commonlib-ae")
+    set_default("skyrim-commonlib-vr")
+    -- set_default("skyrim-commonlib-ae")
 option_end()
 
 if not has_config("commonlib") then
@@ -21,6 +22,11 @@ includes("xmake/*.lua")
 add_requires(get_config("commonlib"))
 add_requires("SkyrimScripting.Plugin", { configs = { commonlib = get_config("commonlib") } })
 add_requires("imgui", { configs = { dx11 = true, win32 = true, freetype = true }})
+
+add_defines("ENABLE_SKYRIM_VR")
+
+-- This might be missing in the commonlib package:
+add_defines("SKYRIMVR")
 
 target("Build Papyrus Scripts")
     set_kind("phony")
